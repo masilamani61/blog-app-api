@@ -15,7 +15,7 @@ app.use("/images",express.static(path.join(__dirname,'/images')))
 
 app.use(
     cors({
-        origin:'https://blog-app-o0wb.onrender.com/', 
+        origin:'https://blog-app-o0wb.onrender.com', 
         credentials:true,            //access-control-allow-credentials:true
         optionSuccessStatus:200
     }
