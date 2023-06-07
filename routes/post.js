@@ -63,26 +63,7 @@ router.delete('/:id',async(req,res)=>{
 })
 
 
-router.put('/:id',async(req,res)=>{
-    try{
-    const Post=await post.findById(req.params.id)
-    if (Post.username===req.body.username){
-        try{
-        const updatedpost= await post.findByIdAndUpdate(req.params.id,{$set:req.body,},{new:true})
-        res.status(200).json(updatedpost)
-        }
-        catch(err){
-            res.status(400).json(err)
-        }
-    }
-    else{
-        res.status(500).json(err)
-    }
-}
-    catch(err){
-        res.status(500).json(err)
-    }
-})
+
 
 
 router.get('/:id',async(req,res)=>{
